@@ -7,5 +7,6 @@ streamlit==1.38.0
 pypdf==4.3.1
 python-docx==1.1.2
 docx2txt==0.8
-tiktoken==0.7.0
+tiktoken==0.9.0
+pillow==11.2.1
 python-dotenv==1.0.1
