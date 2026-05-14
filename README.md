@@ -1,4 +1,7 @@
-# 🔍 RAG Document Q&A System
+Here it is — copy everything below and paste it into the editor, replacing everything:
+
+```markdown
+# 🔍 DocuMind — RAG Document Q&A System
 
 > **Ask questions about any document. Get cited, grounded answers — scored for hallucination risk.**
 
@@ -64,8 +67,8 @@ Documents (PDF/TXT/DOCX)
 ### 1. Clone & install
 
 ```bash
-git clone https://github.com/Ayu-Pyramid/rag-document-qa.git
-cd rag-document-qa
+git clone https://github.com/Ayu-Pyramid/DocuMind.git
+cd DocuMind
 python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -96,7 +99,7 @@ python run.py ingest paper.pdf report.docx
 python run.py query "What are the main findings?" --eval
 
 # Batch evaluate from a question file
-python run.py eval eval/sample_questions.txt --output results.json
+python run.py eval sample_questions.txt --output results.json
 ```
 
 ---
@@ -144,17 +147,14 @@ Each dimension is scored **1–5**. The system outputs an overall grade (A–F) 
 ## 📁 Project Structure
 
 ```
-rag-document-qa/
+DocuMind/
 ├── app.py                  # Streamlit UI (ingest + query + eval tabs)
 ├── run.py                  # CLI interface
-├── src/
-│   ├── rag_pipeline.py     # Core RAG: load → chunk → embed → retrieve → generate
-│   └── evaluator.py        # LLM-as-judge evaluation with EvalReport
-├── eval/
-│   └── sample_questions.txt
-├── data/                   # FAISS index saved here (gitignored)
+├── evaluator.py            # LLM-as-judge evaluation with EvalReport
+├── rag_pipeline.py         # Core RAG: load → chunk → embed → retrieve → generate
+├── sample_questions.txt    # Sample questions for batch evaluation
 ├── requirements.txt
-└── .env.example
+└── README.md
 ```
 
 ---
@@ -186,3 +186,6 @@ All tunable via the Streamlit sidebar or constructor args:
 ## 📄 License
 
 MIT — free to use, modify, and build on.
+```
+
+Paste that in, commit, done.
